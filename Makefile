@@ -24,7 +24,7 @@ install:  ## Install quartz dependencies and plugins
 	@echo "Installing dependencies"
 	@cd quartz; npm install --ignore-scripts; npm run install-plugins;
 
-prepare: copy-config copy-vault copy-wrangler-config
+prepare: copy-config copy-vault
 	@echo "Removing obsidian config files"
 	@rm -rf ./quartz/content/.obsidian/
 
@@ -35,7 +35,3 @@ copy-config:
 copy-vault:
 	@echo "Copying Obsidian Vault"
 	@cp -a ./vault/. ./quartz/content/
-
-copy-wrangler-config:
-	@echo "Copying Wrangler config"
-	@cp wrangler.jsonc ./quartz/
