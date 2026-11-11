@@ -4,17 +4,31 @@
     "type": "split",
     "children": [
       {
-        "id": "10ed28d0e37e688b",
+        "id": "3e28b4419b15169b",
         "type": "tabs",
         "children": [
           {
-            "id": "dc220ecc1083a4be",
+            "id": "d55ae487212d8822",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "index"
             }
           }
         ]
@@ -95,6 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -155,12 +171,25 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
               "title": "Esquema"
+            }
+          },
+          {
+            "id": "f1718a28e987e11d",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "index.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Notas al pie"
             }
           }
         ]
@@ -178,11 +207,13 @@
       "daily-notes:Abrir la nota de hoy": false,
       "templates:Insertar plantilla": false,
       "command-palette:Abrir paleta de comandos": false,
-      "bases:Crear nueva base": false
+      "bases:Crear nueva base": false,
+      "markdown-importer:Abrir el importador de Markdown": false
     }
   },
-  "active": "dc220ecc1083a4be",
+  "active": "d55ae487212d8822",
   "lastOpenFiles": [
+    "index.md",
     "linux/capabilities/capabilities.md",
     "linux/capabilities/CAP_WAKE_ALARM.md",
     "linux/capabilities/CAP_SYSLOG.md",
@@ -208,7 +239,6 @@
     "linux/capabilities/CAP_MKNOD.md",
     "linux/capabilities/CAP_MAC_OVERRIDE.md",
     "linux/capabilities/CAP_MAC_ADMIN.md",
-    "linux/capabilities/CAP_LINUX_IMMUTABLE.md",
     "linux/capabilities",
     "linux"
   ]
