@@ -1,1 +1,6 @@
-{}
+{
+  "newFileLocation": "folder",
+  "newFileFolderPath": "_notes",
+  "attachmentFolderPath": "_attachments",
+  "alwaysUpdateLinks": true
+}
