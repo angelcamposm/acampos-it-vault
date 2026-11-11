@@ -1,0 +1,41 @@
+SHELL = /usr/bin/bash
+
+QUARTZ_GIT_TAG := v5.1.0
+
+build:  ## Build the obsidian vault with quartz project
+	@echo "Building Quartz"
+	@cd ./quartz; \
+	npx quartz build
+
+clean:
+	@rm -rf quartz/{*,.*}
+
+clean-content:
+	@rm -rf ./quartz/content/{*,.*}
+
+clean-public:
+	@rm -rf ./quartz/public/{*,.*}
+
+clone: clean
+	@echo "Clone Quartz repository on branch $(QUARTZ_GIT_TAG)"
+	@git clone --branch $(QUARTZ_GIT_TAG) git@github.com:jackyzha0/quartz.git quartz
+
+install:  ## Install quartz dependencies and plugins
+	@echo "Installing dependencies"
+	@cd quartz; npm install --ignore-scripts; npm run install-plugins;
+
+prepare: copy-config copy-vault copy-wrangler-config
+	@echo "Removing obsidian config files"
+	@rm -rf ./quartz/content/.obsidian/
+
+copy-config:
+	@echo "Copying Quartz configuration"
+	@cp quartz.config.yaml ./quartz
+
+copy-vault:
+	@echo "Copying Obsidian Vault"
+	@cp -a ./vault/. ./quartz/content/
+
+copy-wrangler-config:
+	@echo "Copying Wrangler config"
+	@cp wrangler.jsonc ./quartz/

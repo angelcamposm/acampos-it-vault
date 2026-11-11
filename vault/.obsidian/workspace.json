@@ -1,0 +1,215 @@
+{
+  "main": {
+    "id": "38101a83e390751c",
+    "type": "split",
+    "children": [
+      {
+        "id": "10ed28d0e37e688b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dc220ecc1083a4be",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Nueva pestaña"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "933557a372a8401d",
+    "type": "split",
+    "children": [
+      {
+        "id": "8ce91cea5a25e470",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cda62807b108244b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de archivos"
+            }
+          },
+          {
+            "id": "f708e3be36576500",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Buscar"
+            }
+          },
+          {
+            "id": "5ad7fee7cb799962",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "92d0982bac56d228",
+    "type": "split",
+    "children": [
+      {
+        "id": "eea87b4da742bfcb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be9b540a714f3009",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Enlaces entrantes"
+            }
+          },
+          {
+            "id": "f3c682703ccfee9e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes"
+            }
+          },
+          {
+            "id": "a2f9d1161cc32e24",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "4e78b9c93468c328",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas las propiedades"
+            }
+          },
+          {
+            "id": "a8e19d55f5fad666",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Esquema"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
+    }
+  },
+  "active": "dc220ecc1083a4be",
+  "lastOpenFiles": [
+    "linux/capabilities/capabilities.md",
+    "linux/capabilities/CAP_WAKE_ALARM.md",
+    "linux/capabilities/CAP_SYSLOG.md",
+    "linux/capabilities/CAP_SYS_TTY_CONFIG.md",
+    "linux/capabilities/CAP_SYS_TIME.md",
+    "linux/capabilities/CAP_SYS_RESOURCE.md",
+    "linux/capabilities/CAP_SYS_RAWIO.md",
+    "linux/capabilities/CAP_SYS_PTRACE.md",
+    "linux/capabilities/CAP_SYS_PACCT.md",
+    "linux/capabilities/CAP_SYS_NICE.md",
+    "linux/capabilities/CAP_SYS_MODULE.md",
+    "linux/capabilities/CAP_SYS_CHROOT.md",
+    "linux/capabilities/CAP_SYS_BOOT.md",
+    "linux/capabilities/CAP_SYS_ADMIN.md",
+    "linux/capabilities/CAP_SETUID.md",
+    "linux/capabilities/CAP_SETPCAP.md",
+    "linux/capabilities/CAP_SETGID.md",
+    "linux/capabilities/CAP_SETFCAP.md",
+    "linux/capabilities/CAP_PERFMON.md",
+    "linux/capabilities/CAP_NET_RAW.md",
+    "linux/capabilities/CAP_NET_BIND_SERVICE.md",
+    "linux/capabilities/CAP_NET_ADMIN.md",
+    "linux/capabilities/CAP_MKNOD.md",
+    "linux/capabilities/CAP_MAC_OVERRIDE.md",
+    "linux/capabilities/CAP_MAC_ADMIN.md",
+    "linux/capabilities/CAP_LINUX_IMMUTABLE.md",
+    "linux/capabilities",
+    "linux"
+  ]
+}
