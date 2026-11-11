@@ -18,7 +18,7 @@ clean-public:
 
 clone: clean
 	@echo "Clone Quartz repository on branch $(QUARTZ_GIT_TAG)"
-	@git clone --branch $(QUARTZ_GIT_TAG) git@github.com:jackyzha0/quartz.git quartz
+	@git clone --branch $(QUARTZ_GIT_TAG) https://github.com/jackyzha0/quartz.git quartz
 
 install:  ## Install quartz dependencies and plugins
 	@echo "Installing dependencies"
