@@ -2,6 +2,7 @@ SHELL = /usr/bin/bash
 
 QUARTZ_GIT_TAG := v5.1.0
 
+.PHONY: build
 build:  ## Build the obsidian vault with quartz project
 	@echo "Building Quartz"
 	@cd ./quartz; \
@@ -19,6 +20,7 @@ clean-public:
 clone: clean
 	@echo "Clone Quartz repository on branch $(QUARTZ_GIT_TAG)"
 	@git clone --branch $(QUARTZ_GIT_TAG) https://github.com/jackyzha0/quartz.git quartz
+	@rm -rf ./quartz/.git
 
 install:  ## Install quartz dependencies and plugins
 	@echo "Installing dependencies"
