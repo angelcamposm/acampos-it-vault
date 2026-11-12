@@ -18,7 +18,7 @@ install:  ## Install quartz dependencies and plugins
 	@echo "🔸 Installing dependencies"
 	@cd quartz; npm install --ignore-scripts; npm run install-plugins;
 
-prepare: copy-config copy-vault
+prepare: copy-config copy-styles copy-vault
 	@echo "🔸 Removing obsidian config files"
 	@rm -rf ./quartz/content/.obsidian/
 
@@ -29,6 +29,10 @@ copy-config:
 copy-robots:
 	@echo "🔸 Copying robots.txt file"
 	@cp ./build/robots.txt ./quartz/public/
+
+copy-styles:
+	@echo "Copying custom CSS"
+	@cp ./build/custom.scss ./quartz/quartz/styles/
 
 copy-vault:
 	@echo "🔸 Copying Obsidian Vault"
