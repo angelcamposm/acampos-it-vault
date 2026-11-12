@@ -1,6 +1,17 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+.page {
+    max-width: 1600px;
+}
+
+.page>#quartz-body {
+    grid-template:
+        "grid-sidebar-left grid-header grid-sidebar-right"
+        "grid-sidebar-left grid-center grid-sidebar-right"
+        "grid-sidebar-left grid-footer grid-sidebar-right" / 360px auto 360px;
+}
+
 .note-properties .note-properties-tags {
     display: inline-block;
 }
