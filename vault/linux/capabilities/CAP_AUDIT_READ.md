@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite leer el registro de auditoría
+draft: false
+publish: true
 tags:
   - linux
   - capabilities
@@ -12,7 +14,7 @@ title: CAP_AUDIT_READ
 
 ### Descripción de CAP_AUDIT_READ
 
-La capability `CAP_AUDIT_READ` permite leer el registro de auditoría a través de un socket netlink multicast.  
+La capability `CAP_AUDIT_READ` permite leer el registro de auditoría a través de un socket netlink multicast. 
 
 ### Casos de uso comunes
 
@@ -21,7 +23,7 @@ La capability `CAP_AUDIT_READ` permite leer el registro de auditoría a través 
 
 ### Llamadas al Sistema Asociadas
 
-Esta capability se utiliza al leer datos del socket netlink configurado para recibir eventos de auditoría.  
+Esta capability se utiliza al leer datos del socket netlink configurado para recibir eventos de auditoría. 
 
 ### Implicaciones de seguridad
 

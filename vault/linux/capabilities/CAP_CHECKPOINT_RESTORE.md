@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite realizar operaciones de checkpoint y restore
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

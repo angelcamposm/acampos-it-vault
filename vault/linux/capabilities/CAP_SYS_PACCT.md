@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite usar acct para activar o desactivar la contabilidad de procesos
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite realizar operaciones privilegiadas de syslog
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

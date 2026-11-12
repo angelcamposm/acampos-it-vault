@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite habilitar y deshabilitar la auditoría del kernel
+draft: false
+publish: true
 tags:
   - linux
   - capabilities
@@ -12,7 +14,7 @@ title: CAP_AUDIT_CONTROL
 
 ### Descripción de CAP_AUDIT_CONTROL
 
-La capability `CAP_AUDIT_CONTROL` permite habilitar y deshabilitar la auditoría del kernel, cambiar las reglas del filtro de auditoría y recuperar el estado y las reglas de filtrado de la auditoría.1
+La capability `CAP_AUDIT_CONTROL` permite habilitar y deshabilitar la auditoría del kernel, cambiar las reglas del filtro de auditoría y recuperar el estado y las reglas de filtrado de la auditoría.
 
 ### Casos de Uso Comunes
 
@@ -21,7 +23,7 @@ La capability `CAP_AUDIT_CONTROL` permite habilitar y deshabilitar la auditoría
 
 ### Llamadas al Sistema Asociadas
 
-Esta capability está relacionada con las llamadas al sistema utilizadas para interactuar con el subsistema de auditoría de Linux, como auditctl y las interfaces relacionadas con netlink sockets para la auditoría.4
+Esta capability está relacionada con las llamadas al sistema utilizadas para interactuar con el subsistema de auditoría de Linux, como auditctl y las interfaces relacionadas con netlink sockets para la auditoría.
 
 ### Implicaciones de Seguridad
 

@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite usar sockets RAW y PACKET
+draft: false
+publish: true
 tags:
   - linux
   - capabilities
@@ -13,12 +15,12 @@ title: CAP_NET_RAW
 
 ### Descripción de CAP_NET_RAW  
   
-La capability `CAP_NET_RAW` permite usar sockets `RAW` y `PACKET`; enlazar a cualquier dirección para proxying transparente.[1, 2, 3, 7, 10, 5, 6]  
+La capability `CAP_NET_RAW` permite usar sockets `RAW` y `PACKET`; enlazar a cualquier dirección para proxying transparente.* 2, 3, 7, 10, 5, 6]  
   
 ### Casos de Uso Comunes  
   
-*   Herramientas de diagnóstico de red como `ping` o `tcpdump`.  
-*   Aplicaciones que implementan protocolos de red personalizados.  
+* Herramientas de diagnóstico de red como `ping` o `tcpdump`.  
+* Aplicaciones que implementan protocolos de red personalizados.  
   
 ### Llamadas al Sistema Asociadas  
   
@@ -30,11 +32,11 @@ El uso de sockets raw permite a un proceso enviar y recibir paquetes de red sin 
   
 ### Comandos y Herramientas Relacionadas  
   
-*   `ping`, `tcpdump`, `wireshark`.  
-*   `capsh`: Shell con capacidades para pruebas y depuración de capabilities.[1, 5, 6]  
+* `ping`, `tcpdump`, `wireshark`.  
+* `capsh`: Shell con capacidades para pruebas y depuración de capabilities.  
   
 ### Referencias  
   
-*   [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
-*   [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)  
+* [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
+* [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)  
   

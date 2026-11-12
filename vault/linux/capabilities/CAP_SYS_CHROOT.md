@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite usar la llamada al sistema chroot
+draft: false
+publish: true
 tags:
   - linux
   - capabilities
@@ -12,15 +14,15 @@ title: CAP_SYS_CHROOT
 
 ### Descripción de CAP_SYS_CHROOT  
   
-La capability `CAP_SYS_CHROOT` permite usar la llamada al sistema chroot(2) para cambiar el directorio raíz.[1, 2, 7, 5, 6, 9]  
+La capability `CAP_SYS_CHROOT` permite usar la llamada al sistema chroot(2) para cambiar el directorio raíz.  
   
 ### Casos de Uso Comunes  
   
-*   Utilidades que crean entornos aislados o jails.  
+* Utilidades que crean entornos aislados o jails.  
   
 ### Llamadas al Sistema Asociadas  
   
-Esta capability está directamente relacionada con la llamada al sistema `chroot`.[4]  
+Esta capability está directamente relacionada con la llamada al sistema `chroot`.  
   
 ### Implicaciones de Seguridad  
   
@@ -28,11 +30,11 @@ Aunque `chroot` proporciona cierto nivel de aislamiento, no es una solución de 
   
 ### Comandos y Herramientas Relacionadas  
   
-*   La utilidad `chroot`.  
-*   `capsh`: Shell con capacidades para pruebas y depuración de capabilities.[1, 5, 6]  
+* La utilidad `chroot`.  
+* `capsh`: Shell con capacidades para pruebas y depuración de capabilities.  
   
 ### Referencias  
   
-*   [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
-*   [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)  
+* [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
+* [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)  
   

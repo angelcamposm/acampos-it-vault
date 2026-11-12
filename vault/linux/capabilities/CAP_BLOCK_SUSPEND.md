@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite emplear características que pueden bloquear la suspensión del sistema
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

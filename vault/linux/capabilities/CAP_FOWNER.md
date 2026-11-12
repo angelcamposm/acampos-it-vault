@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite saltarse las comprobaciones de permisos que normalmente requieren que el UID del proceso coincida con el UID del fichero
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

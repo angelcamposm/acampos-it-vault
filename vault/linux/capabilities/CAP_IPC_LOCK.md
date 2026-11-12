@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite bloquear memoria
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

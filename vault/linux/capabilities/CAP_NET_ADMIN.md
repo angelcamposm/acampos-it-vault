@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite realizar diversas operaciones relacionadas con la red
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

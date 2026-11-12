@@ -1,10 +1,12 @@
 ---
-title: Inicio
-description: Base de conocimiento técnico sobre ingeniería del software, sistemas distribuidos, redes, ciberseguridad, DevOps, SRE e ingeniería de plataformas para ingenieros júnior.
 aliases:
   - index
   - home
   - vault
+date: 2026-11-11
+description: Base de conocimiento técnico sobre ingeniería del software, sistemas distribuidos, redes, ciberseguridad, DevOps, SRE e ingeniería de plataformas para ingenieros júnior.
+draft: false
+publish: true
 tags:
   - index
   - devops
@@ -17,7 +19,7 @@ tags:
   - git
   - gitops
   - netops
-date: 2026-11-11
+title: Inicio
 ---
 
 Bienvenido a este **segundo cerebro** y jardín digital técnico. Este espacio recopila apuntes, guías prácticas y conceptos fundamentales explicados en español claro y directo, pensados especialmente para **ingenieros júnior** que buscan consolidar sus bases técnicas y comprender cómo funcionan los sistemas reales en producción.

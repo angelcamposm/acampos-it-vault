@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite realizar operaciones IPC_SET e IPC_RMID en objetos IPC System V arbitrarios
+draft: false
+publish: true
 tags:
   - linux
   - capabilities
@@ -11,15 +13,15 @@ title: CAP_IPC_OWNER
   
 ### Descripción de CAP_IPC_OWNER  
   
-La capability `CAP_IPC_OWNER` permite realizar operaciones `IPC_SET` e `IPC_RMID` en objetos IPC System V arbitrarios.[1, 2, 3]  
+La capability `CAP_IPC_OWNER` permite realizar operaciones `IPC_SET` e `IPC_RMID` en objetos IPC System V arbitrarios.  
   
 ### Casos de Uso Comunes  
   
-*   Utilidades de administración que necesitan gestionar objetos de comunicación entre procesos (IPC) System V, como colas de mensajes, semáforos y memoria compartida.  
+* Utilidades de administración que necesitan gestionar objetos de comunicación entre procesos (IPC) System V, como colas de mensajes, semáforos y memoria compartida.  
   
 ### Llamadas al Sistema Asociadas  
   
-Esta capability está relacionada con llamadas al sistema como `msgctl`, `msgget`, `semctl`, `semget`, `shmctl` y `shmget`.[4]  
+Esta capability está relacionada con llamadas al sistema como `msgctl`, `msgget`, `semctl`, `semget`, `shmctl` y `shmget`.  
   
 ### Implicaciones de Seguridad  
   
@@ -27,10 +29,10 @@ Un proceso con esta capability puede modificar o eliminar objetos IPC propiedad 
   
 ### Comandos y Herramientas Relacionadas  
   
-*   Utilidades como `ipcs` e `ipcrm`.  
-*   `capsh`: Shell con capacidades para pruebas y depuración de capabilities.[1, 5, 6]  
+* Utilidades como `ipcs` e `ipcrm`.  
+* `capsh`: Shell con capacidades para pruebas y depuración de capabilities.  
   
 ### Referencias  
   
-*   [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
-*   [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)  
+* [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
+* [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)  

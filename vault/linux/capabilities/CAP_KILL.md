@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite saltarse las comprobaciones de permisos para el envío de señales
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

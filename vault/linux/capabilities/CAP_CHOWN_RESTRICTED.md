@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Restringe el cambio de propietario de ficheros
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

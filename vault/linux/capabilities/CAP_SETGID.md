@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite realizar manipulaciones arbitrarias de los GIDs de los procesos
+draft: false
+publish: true
 tags:
   - linux
   - capabilities

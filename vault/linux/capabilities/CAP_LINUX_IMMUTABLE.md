@@ -2,6 +2,8 @@
 aliases:
 date: 2024-07-31
 description: Permite establecer los flags FS_APPEND_FL y FS_IMMUTABLE_FL en inodos
+draft: false
+publish: true
 tags:
   - linux
   - capabilities
