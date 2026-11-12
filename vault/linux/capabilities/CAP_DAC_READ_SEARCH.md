@@ -36,5 +36,5 @@ Aunque menos permisiva que `CAP_DAC_OVERRIDE`, esta capability aún permite a un
   
 ### Referencias  
   
-* [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
+* [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
 * [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)  

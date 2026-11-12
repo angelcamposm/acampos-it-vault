@@ -32,9 +32,9 @@ Otorgar esta capability permite un control total sobre la configuración de la a
 ### Comandos y Herramientas Relacionadas
 
 - auditctl: Utilidad para controlar el demonio de auditoría del kernel.
-- capsh: Shell con capacidades para pruebas y depuración de capabilities.1
+- capsh: Shell con capacidades para pruebas y depuración de capabilities.
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html){:target="_blank"}
+- [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)

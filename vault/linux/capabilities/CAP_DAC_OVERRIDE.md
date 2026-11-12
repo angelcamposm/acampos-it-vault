@@ -14,7 +14,7 @@ title: CAP_DAC_OVERRIDE
 
 ### Descripción de CAP_DAC_OVERRIDE
 
-La capability `CAP_DAC_OVERRIDE` permite saltarse las comprobaciones de permisos de acceso discrecional (DAC) para lectura, escritura y ejecución de ficheros.1
+La capability `CAP_DAC_OVERRIDE` permite saltarse las comprobaciones de permisos de acceso discrecional (DAC) para lectura, escritura y ejecución de ficheros.
 
 ### Casos de Uso Comunes
 
@@ -23,7 +23,7 @@ La capability `CAP_DAC_OVERRIDE` permite saltarse las comprobaciones de permisos
 
 ### Llamadas al Sistema Asociadas
 
-Esta capability puede estar relacionada con llamadas al sistema como mount, utime y utimensat.4
+Esta capability puede estar relacionada con llamadas al sistema como mount, utime y utimensat.
 
 ### Implicaciones de Seguridad
 
@@ -32,9 +32,9 @@ Un proceso con esta capability puede leer o modificar cualquier fichero del sist
 ### Comandos y Herramientas Relacionadas
 
 - Herramientas de backup como tar o rsync (a menudo requieren esta capability).
-- capsh: Shell con capacidades para pruebas y depuración de capabilities.1
+- capsh: Shell con capacidades para pruebas y depuración de capabilities.
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+- [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)

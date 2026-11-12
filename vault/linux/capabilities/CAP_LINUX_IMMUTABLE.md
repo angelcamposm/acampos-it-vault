@@ -14,7 +14,7 @@ title: CAP_LINUX_IMMUTABLE
 
 ### Descripción de CAP_LINUX_IMMUTABLE
 
-La capability `CAP_LINUX_IMMUTABLE` permite establecer los flags `FS_APPEND_FL` y `FS_IMMUTABLE_FL` en inodos (ver FS_IOC_SETFLAGS(2const)).1
+La capability `CAP_LINUX_IMMUTABLE` permite establecer los flags `FS_APPEND_FL` y `FS_IMMUTABLE_FL` en inodos (ver FS_IOC_SETFLAGS(2const)).
 
 ### Casos de Uso Comunes
 
@@ -22,7 +22,7 @@ La capability `CAP_LINUX_IMMUTABLE` permite establecer los flags `FS_APPEND_FL` 
 
 ### Llamadas al Sistema Asociadas
 
-Esta capability está relacionada con la llamada al sistema ioctl_iflags.4
+Esta capability está relacionada con la llamada al sistema ioctl_iflags.
 
 ### Implicaciones de Seguridad
 
@@ -32,9 +32,9 @@ Establecer el flag immutable en ficheros importantes puede mejorar la seguridad 
 
 - chattr: Utilidad para modificar los atributos de los ficheros en un sistema de archivos Linux.
 - lsattr: Utilidad para listar los atributos de los ficheros en un sistema de archivos Linux.
-- capsh: Shell con capacidades para pruebas y depuración de capabilities.1
+- capsh: Shell con capacidades para pruebas y depuración de capabilities.
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+- [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)

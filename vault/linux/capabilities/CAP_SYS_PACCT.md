@@ -14,7 +14,7 @@ title: CAP_SYS_PACCT
 
 ### Descripción de CAP_SYS_PACCT
 
-La capability `CAP_SYS_PACCT` permite usar acct(2) para activar o desactivar la contabilidad de procesos.1
+La capability `CAP_SYS_PACCT` permite usar acct(2) para activar o desactivar la contabilidad de procesos.
 
 ### Casos de Uso Comunes
 
@@ -22,7 +22,7 @@ La capability `CAP_SYS_PACCT` permite usar acct(2) para activar o desactivar la 
 
 ### Llamadas al Sistema Asociadas
 
-Esta capability está relacionada con la llamada al sistema acct.4
+Esta capability está relacionada con la llamada al sistema acct.
 
 ### Implicaciones de Seguridad
 
@@ -31,9 +31,9 @@ La manipulación de la contabilidad de procesos podría utilizarse para ocultar 
 ### Comandos y Herramientas Relacionadas
 
 - La utilidad accton.
-- capsh: Shell con capacidades para pruebas y depuración de capabilities.1
+- capsh: Shell con capacidades para pruebas y depuración de capabilities.
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+- [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)

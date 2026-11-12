@@ -14,7 +14,7 @@ title: CAP_SYS_RAWIO
 
 ### Descripción de CAP_SYS_RAWIO
 
-La capability `CAP_SYS_RAWIO` permite realizar operaciones de E/S directamente a dispositivos (mmap(2) de `/dev/mem`, `/dev/kmem`, `/dev/raw*`, ioctl(2) con comandos de disco).1
+La capability `CAP_SYS_RAWIO` permite realizar operaciones de E/S directamente a dispositivos (mmap(2) de `/dev/mem`, `/dev/kmem`, `/dev/raw*`, ioctl(2) con comandos de disco).
 
 ### Casos de Uso Comunes
 
@@ -22,7 +22,7 @@ La capability `CAP_SYS_RAWIO` permite realizar operaciones de E/S directamente a
 
 ### Llamadas al Sistema Asociadas
 
-Esta capability puede estar relacionada con llamadas al sistema como ioperm e iopl y el acceso a ficheros de dispositivo como /dev/kmem y /dev/mem.4
+Esta capability puede estar relacionada con llamadas al sistema como ioperm e iopl y el acceso a ficheros de dispositivo como /dev/kmem y /dev/mem.
 
 ### Implicaciones de Seguridad
 
@@ -31,9 +31,9 @@ Permitir el acceso directo al hardware puede ser muy peligroso si se abusa de es
 ### Comandos y Herramientas Relacionadas
 
 - hdparm, dd.
-- capsh: Shell con capacidades para pruebas y depuración de capabilities.1
+- capsh: Shell con capacidades para pruebas y depuración de capabilities.
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+- [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)

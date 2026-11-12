@@ -14,7 +14,7 @@ title: CAP_MAC_OVERRIDE
 
 ### Descripción de CAP_MAC_OVERRIDE
 
-La capability `CAP_MAC_OVERRIDE` permite anular la configuración de MAC.1 También implementada para el LSM Smack.4
+La capability `CAP_MAC_OVERRIDE` permite anular la configuración de MAC. También implementada para el LSM Smack.
 
 ### Casos de Uso Comunes
 
@@ -31,9 +31,9 @@ Permitir la anulación de MAC puede debilitar las políticas de seguridad del si
 ### Comandos y Herramientas Relacionadas
 
 - Herramientas que interactúan con las políticas de Smack.
-- capsh: Shell con capacidades para pruebas y depuración de capabilities.1
+- capsh: Shell con capacidades para pruebas y depuración de capabilities.
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+- [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)

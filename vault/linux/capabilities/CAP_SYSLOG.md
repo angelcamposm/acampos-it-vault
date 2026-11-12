@@ -14,7 +14,7 @@ title: CAP_SYSLOG
 
 ### Descripción de CAP_SYSLOG
 
-La capability `CAP_SYSLOG` permite realizar operaciones privilegiadas de syslog(2).1
+La capability `CAP_SYSLOG` permite realizar operaciones privilegiadas de syslog(2).
 
 ### Casos de Uso Comunes
 
@@ -23,7 +23,7 @@ La capability `CAP_SYSLOG` permite realizar operaciones privilegiadas de syslog(
 
 ### Llamadas al Sistema Asociadas
 
-Esta capability está relacionada con la llamada al sistema syslog y la interacción con archivos como /proc/sys/kernel/kptr_restrict.4
+Esta capability está relacionada con la llamada al sistema syslog y la interacción con archivos como /proc/sys/kernel/kptr_restrict.
 
 ### Implicaciones de Seguridad
 
@@ -33,12 +33,12 @@ Permitir el acceso privilegiado a syslog puede tener implicaciones para la audit
 
 - rsyslogd, syslog-ng.
     
-- capsh: Shell con capacidades para pruebas y depuración de capabilities.1
+- capsh: Shell con capacidades para pruebas y depuración de capabilities.
     
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+- [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
     
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)
     

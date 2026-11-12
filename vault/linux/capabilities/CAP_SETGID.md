@@ -14,7 +14,7 @@ title: CAP_SETGID
 
 ### Descripción de CAP_SETGID
 
-La capability `CAP_SETGID` permite realizar manipulaciones arbitrarias de los GIDs de los procesos y la lista de GIDs suplementarios; falsificar el GID al pasar credenciales de socket a través de sockets de dominio UNIX; escribir una asignación de ID de grupo en un namespace de usuario.1
+La capability `CAP_SETGID` permite realizar manipulaciones arbitrarias de los GIDs de los procesos y la lista de GIDs suplementarios; falsificar el GID al pasar credenciales de socket a través de sockets de dominio UNIX; escribir una asignación de ID de grupo en un namespace de usuario.
 
 ### Casos de Uso Comunes
 
@@ -23,7 +23,7 @@ La capability `CAP_SETGID` permite realizar manipulaciones arbitrarias de los GI
 
 ### Llamadas al Sistema Asociadas
 
-Esta capability puede estar relacionada con llamadas al sistema como clone, getgroups, setgid y setgroups.4
+Esta capability puede estar relacionada con llamadas al sistema como clone, getgroups, setgid y setgroups.
 
 ### Implicaciones de Seguridad
 
@@ -32,9 +32,9 @@ Permitir la manipulación de GIDs puede llevar a escaladas de privilegios si se 
 ### Comandos y Herramientas Relacionadas
 
 - su, sg, chgrp.
-- capsh: Shell con capacidades para pruebas y depuración de capabilities.1
+- capsh: Shell con capacidades para pruebas y depuración de capabilities.
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+- [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)

@@ -35,6 +35,6 @@ Debido a su amplio alcance, otorgar `CAP_SYS_ADMIN` es casi equivalente a otorga
   
 ### Referencias  
   
-* [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
+* [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
 * [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)  
   

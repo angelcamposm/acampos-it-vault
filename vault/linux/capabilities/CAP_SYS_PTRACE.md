@@ -35,7 +35,7 @@ La capacidad de rastrear procesos permite inspeccionar su memoria y su ejecució
   
 ### Referencias  
   
-* [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
+* [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)  
 * [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)  
   
 

@@ -14,7 +14,7 @@ title: CAP_IPC_LOCK
 
 ### Descripción de CAP_IPC_LOCK
 
-La capability `CAP_IPC_LOCK` permite bloquear memoria (mlock(2), mlockall(2), mmap(2) con MAP_LOCKED).1
+La capability `CAP_IPC_LOCK` permite bloquear memoria (mlock(2), mlockall(2), mmap(2) con MAP_LOCKED).
 
 ### Casos de Uso Comunes
 
@@ -23,7 +23,7 @@ La capability `CAP_IPC_LOCK` permite bloquear memoria (mlock(2), mlockall(2), mm
 
 ### Llamadas al Sistema Asociadas
 
-Esta capability está relacionada con las llamadas al sistema mlock, mlock2, mlockall y mmap con la opción MAP_LOCKED.4
+Esta capability está relacionada con las llamadas al sistema mlock, mlock2, mlockall y mmap con la opción MAP_LOCKED.
 
 ### Implicaciones de Seguridad
 
@@ -32,9 +32,9 @@ Bloquear grandes cantidades de memoria podría afectar el rendimiento del sistem
 ### Comandos y Herramientas Relacionadas
 
 - Aplicaciones de bases de datos como PostgreSQL o MySQL.
-- capsh: Shell con capacidades para pruebas y depuración de capabilities.1
+- capsh: Shell con capacidades para pruebas y depuración de capabilities.
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+- [man capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)
