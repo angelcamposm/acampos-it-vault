@@ -1,5 +1,6 @@
 ---
 draft: false
+enableToc: true
 publish: true
 ---
 
