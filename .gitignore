@@ -1,3 +1,4 @@
 .idea/
-quartz/
+quartz/*
+!quartz/.gitkeep
 .env
