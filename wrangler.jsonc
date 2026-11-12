@@ -2,7 +2,6 @@
     "name": "acampos-it-vault",
     "compatibility_date": "2026-11-11",
     "assets": {
-        "directory": "./quartz/public",
-        "not_found_handling": "single-page-application"
+        "directory": "./quartz/public"
     }
 }
