@@ -36,5 +36,5 @@ Otorgar esta capability permite un control total sobre la configuración de la a
 
 ### Referencias
 
-- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html)
+- [man capabilities(7)](https://man7.org/linux/man-pages/man7/capabilities.7.html){:target="_blank"}
 - [Linux Capabilities - Linux Audit](https://linux-audit.com/kernel/capabilities/)
