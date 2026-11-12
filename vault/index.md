@@ -41,7 +41,7 @@ Cómo lograr que múltiples máquinas trabajen juntas sin perder datos ni dispon
 
 ### 3. Sistemas operativos y Linux
 El cimiento sobre el que corre casi toda la infraestructura actual: el núcleo (`kernel`), gestión de procesos, memoria, sistemas de archivos, aislamiento de contenedores (`namespaces`, `cgroups`) y control de privilegios.
-- **Empezar por aquí:** [[linux/capabilities/capabilities|Capacidades del núcleo de Linux (Linux capabilities)]] — Desglose de privilegios del superusuario (`root`), con fichas detalladas como [[CAP_NET_ADMIN]], [[CAP_SYS_ADMIN]] o [[CAP_DAC_OVERRIDE]].
+- **Empezar por aquí:** [[linux/capabilities/index|Capacidades del núcleo de Linux (Linux capabilities)]] — Desglose de privilegios del superusuario (`root`), con fichas detalladas como [[CAP_NET_ADMIN]], [[CAP_SYS_ADMIN]] o [[CAP_DAC_OVERRIDE]].
 
 ### 4. Redes y automatización de red (`Networking` y `NetOps`)
 Desde el modelo TCP/IP, enrutamiento (`routing`), conmutación (`switching`), DNS y cortafuegos (`firewalls`), hasta la gestión programática y automatizada de infraestructuras de red mediante código (`NetOps`).
@@ -68,7 +68,7 @@ La evolución natural de `DevOps` para reducir la carga cognitiva de los equipos
 A diferencia de un libro tradicional, esta wiki no tiene un orden único de lectura. Puedes explorarla de varias maneras:
 
 1. **Mediante enlaces internos:** sigue los enlaces entre notas para profundizar en los conceptos que no conozcas o entender cómo se relacionan dos tecnologías distintas.
-2. **A través del grafo interactivo:** visualiza qué conceptos actúan como nodos centrales entre disciplinas (por ejemplo, cómo las [[linux/capabilities/capabilities|capabilities de Linux]] conectan el sistema operativo, las redes y la ciberseguridad en contenedores).
+2. **A través del grafo interactivo:** visualiza qué conceptos actúan como nodos centrales entre disciplinas (por ejemplo, cómo las [[linux/capabilities/index|capabilities de Linux]] conectan el sistema operativo, las redes y la ciberseguridad en contenedores).
 3. **Con el buscador y las etiquetas (`tags`):** filtra rápidamente por áreas como `#linux`, `#networking`, `#capabilities` o `#cybersecurity`.
 
 > [!TIP] Consejo para ingenieros júnior
