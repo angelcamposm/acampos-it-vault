@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# AI Search Crawlers (Allowed — so your pages appear in AI answers)
+User-agent: OAI-SearchBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+Allow: /
+
+# User-Triggered AI Fetchers (Allowed — when a user asks an assistant to read a URL)
+User-agent: ChatGPT-User
+User-agent: Claude-User
+User-agent: Perplexity-User
+Allow: /
+
+# AI Training Crawlers (Disallowed — prevents scraping for model training)
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Amazonbot
+Disallow: /
+
+Sitemap: https://vault.acampos.it/sitemap.xml
