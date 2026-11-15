@@ -14,7 +14,7 @@ tags:
   - test_automation
   - clean_code
   - architecture
-title: "DRY, WET y DAMP en Testing Automation"
+title: "Testing Automation"
 ---
 
 En el desarrollo de software de producción, nos enseñan desde el primer día una regla casi sagrada: **no repitas código** ([[DRY]] — *Don't Repeat Yourself*). Si copias y pegas lógica de negocio en varios sitios, cualquier cambio futuro requerirá actualizar múltiples archivos, multiplicando el riesgo de introducir errores.
