@@ -35,7 +35,8 @@ El contenido de este repositorio se organiza en torno a los pilares fundamentale
 
 ### 1. Ingeniería del software (`Software Engineering`)
 Principios de diseño, arquitectura limpia, estructuras de datos, pruebas automatizadas, patrones de diseño y buenas prácticas para escribir código mantenible, legible y fácil de depurar.
-- **Empezar por aquí:** [[software-engineering/testing/index|DRY, WET y DAMP en Testing Automation]] — Cómo equilibrar abstracción, reutilización y legibilidad en suites de pruebas automatizadas, con fichas detalladas sobre [[DRY]], [[WET]] y [[DAMP]].
+- **Convenciones de nombres (*Naming Conventions*):** [[software-engineering/naming-conventions/index|Guía comparativa de convenciones de nombres]] — Cuándo y por qué usar [[camel-case|camelCase]], [[snake-case|snake_case]] (`SCREAMING_SNAKE_CASE`), [[pascal-case|PascalCase]] y [[kebab-case|kebab-case]] según el lenguaje, base de datos o infraestructura.
+- **Automatización de pruebas (*Testing Automation*):** [[software-engineering/testing/index|DRY, WET y DAMP en Testing Automation]] — Cómo equilibrar abstracción, reutilización y legibilidad en suites de pruebas automatizadas, con fichas detalladas sobre [[DRY]], [[WET]] y [[DAMP]].
 
 ### 2. Sistemas distribuidos (`Distributed Systems`)
 Cómo lograr que múltiples máquinas trabajen juntas sin perder datos ni disponibilidad: consenso, replicación, particionamiento, tolerancia a fallos, colas de mensajería, latencia y concurrencia.
