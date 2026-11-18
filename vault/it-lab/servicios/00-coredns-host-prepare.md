@@ -68,17 +68,19 @@ DNS=1.1.1.1 8.8.8.8
 DNSStubListener=no
 ```
 
-3. Reinicia el servicio `systemd-resolved` y actualiza el enlace simbólico de `/etc/resolv.conf` para que apunte directamente al fichero de resolución real en lugar del stub `127.0.0.53`:
+3. Reinicia el servicio `systemd-resolved`:
 
 ```bash
 sudo systemctl restart systemd-resolved
 ```
 
+4. Actualiza el enlace simbólico de `/etc/resolv.conf` para que apunte directamente al fichero de resolución real en lugar del stub `127.0.0.53`
+
 ```bash
 sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
 ```
 
-4. **Verificación:** Comprueba que ningún servicio esté escuchando ya en el puerto `53`:
+5. **Verificación:** Comprueba que ningún servicio esté escuchando ya en el puerto `53`:
 
 ```bash
 sudo ss -tulpn | grep :53
