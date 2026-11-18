@@ -12,7 +12,7 @@ tags:
   - networking
   - net-tools
   - troubleshooting
-title: "Ubuntu: Instalación de netstat (net-tools)"
+title: "Instalación de netstat (net-tools)"
 ---
 
 En distribuciones Linux modernas y especialmente en instalaciones **Ubuntu Server (Minimal)**, el paquete clásico **`net-tools`** ya no se instala por defecto. Desde hace varios años, las distribuciones han migrado hacia la suite moderna **`iproute2`** (`ss`, `ip addr`, `ip route`, `ip neigh`), que se comunica directamente con el kernel de Linux mediante sockets `netlink` en lugar de leer y parsear ficheros secuenciales de `/proc/net/*`.

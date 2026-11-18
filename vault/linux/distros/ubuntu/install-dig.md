@@ -12,7 +12,7 @@ tags:
   - dns
   - networking
   - troubleshooting
-title: "Ubuntu: Instalación de dig (dnsutils)"
+title: "Instalación de dig (dnsutils)"
 ---
 
 En las instalaciones mínimas de **Ubuntu Server** (*Ubuntu Minimal*) o en imágenes base de contenedores, las herramientas cliente de diagnóstico DNS de ISC BIND no vienen preinstaladas para reducir el tamaño de la imagen y la superficie de paquetes del sistema base.
