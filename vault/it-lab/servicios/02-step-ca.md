@@ -12,7 +12,7 @@ tags:
   - tls
   - security
   - docker
-title: 00. Smallstep step-ca
+title: 02. Smallstep step-ca
 ---
 
 ## 1. High Level Architecture

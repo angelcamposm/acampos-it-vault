@@ -11,7 +11,7 @@ tags:
   - linux
   - systemd
   - docker
-title: "00. CoreDNS: Preparación del host"
+title: "00. Preparación del host"
 ---
 
 Usaremos **[CoreDNS](https://coredns.io/)** en Docker actuando como servidor DNS autoritativo para nuestra zona local (`acampos.local`) y como _forwarder_ hacia Internet para el resto de consultas. Antes de levantar el contenedor de [[00-coredns|CoreDNS]], debemos preparar el sistema operativo anfitrión para liberar el puerto `53` y crear la red de Docker compartida.

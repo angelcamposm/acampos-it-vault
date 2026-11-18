@@ -12,7 +12,7 @@ tags:
   - devops
   - docker
   - hla
-title: 04. Sonatype Nexus Repository Manager 3
+title: 07. Sonatype Nexus Repository Manager 3
 ---
 
 ## 1. High Level Architecture

@@ -11,7 +11,7 @@ tags:
   - tls
   - acme
   - docker
-title: 01. Traefik v3
+title: 03. Traefik v3
 ---
 
 ## 1. High Level Architecture

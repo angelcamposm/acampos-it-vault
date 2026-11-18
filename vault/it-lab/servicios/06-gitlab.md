@@ -12,7 +12,7 @@ tags:
   - cicd
   - docker
   - hla
-title: 03. GitLab CE
+title: 06. GitLab CE
 ---
 
 ## 1. High Level Architecture

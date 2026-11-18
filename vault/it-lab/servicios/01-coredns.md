@@ -11,7 +11,7 @@ tags:
   - network-service
   - management
   - docker
-title: 00. CoreDNS
+title: 01. CoreDNS
 ---
 
 ## 1. High Level Architecture

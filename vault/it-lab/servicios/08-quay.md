@@ -12,7 +12,7 @@ tags:
   - redis
   - docker
   - hla
-title: 05. Project Quay
+title: 08. Project Quay
 ---
 
 ## 1. High Level Architecture

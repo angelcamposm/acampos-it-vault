@@ -10,7 +10,7 @@ tags:
   - docker
   - management
   - hla
-title: 01. Portainer CE
+title: 04. Portainer CE
 ---
 
 ## 1. High Level Architecture

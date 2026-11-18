@@ -47,11 +47,11 @@ flowchart LR
 
 | Orden | Servicio | Dominio / Endpoint | Propósito |
 | :---: | :--- | :--- | :--- |
-| **00a** | [[00-coredns-host-prepare\|Preparación del Host]] | `192.168.10.104` | Liberación del puerto `53` (`systemd-resolved`) y creación de la red `traefik-proxy`. |
-| **00b** | [[00-coredns\|CoreDNS]] | `ns1.acampos.local` (`:53`) | Servidor DNS autoritativo local (`*.acampos.local` + zona inversa `PTR`) y _forwarder_. |
-| **00c** | [[00-step-ca\|Smallstep step-ca]] | `ca.acampos.local` (`:9000`) | Autoridad Certificadora (PKI) privada y servidor ACME local para emisión automática de TLS. |
-| **01a** | [[01-traefik\|Traefik v3]] | `https://traefik.acampos.local` | Proxy inverso, _Edge Router_ dinámico y punto de terminación del túnel TLS (`:80` / `:443`). |
-| **01b** | [[01-portainer\|Portainer CE]] | `https://portainer.acampos.local` | Interfaz web y API para la gestión centralizada de contenedores, volúmenes y redes Docker. |
+| **00** | [[00-coredns-host-prepare\|Preparación del Host]] | `192.168.10.104` | Liberación del puerto `53` (`systemd-resolved`) y creación de la red `traefik-proxy`. |
+| **01** | [[00-coredns\|CoreDNS]] | `ns1.acampos.local` (`:53`) | Servidor DNS autoritativo local (`*.acampos.local` + zona inversa `PTR`) y _forwarder_. |
+| **02** | [[00-step-ca\|Smallstep step-ca]] | `ca.acampos.local` (`:9000`) | Autoridad Certificadora (PKI) privada y servidor ACME local para emisión automática de TLS. |
+| **03** | [[01-traefik\|Traefik v3]] | `https://traefik.acampos.local` | Proxy inverso, _Edge Router_ dinámico y punto de terminación del túnel TLS (`:80` / `:443`). |
+| **04** | [[01-portainer\|Portainer CE]] | `https://portainer.acampos.local` | Interfaz web y API para la gestión centralizada de contenedores, volúmenes y redes Docker. |
 
 ## 3. Servicios de Plataforma DevSecOps
 
@@ -59,9 +59,9 @@ Cada servicio de plataforma dispone de su propia red interna aislada (`<servicio
 
 | Orden | Servicio | Dominio / Endpoint | Propósito |
 | :---: | :--- | :--- | :--- |
-| **02** | [[02-jenkins\|Jenkins LTS]] | `https://jenkins.acampos.local` | Servidor de automatización e integración/entrega continua (`CI/CD`). |
-| **03** | [[03-gitlab\|GitLab CE]] | `https://gitlab.acampos.local`<br>`ssh://...:2222` | Plataforma integral de desarrollo, control de versiones Git, _Merge Requests_ y CI. |
-| **04** | [[04-nexus\|Sonatype Nexus 3]] | `https://nexus.acampos.local`<br>`https://docker.acampos.local` | Repositorio privado de artefactos, proxy caché local (Maven, npm, PyPI) y _Docker Registry_. |
-| **05** | [[05-quay\|Project Quay]] | `https://quay.acampos.local` | Registro empresarial de imágenes de contenedor y artefactos OCI respaldado por PostgreSQL y Redis. |
-| **06** | SonarQube *(Próximamente)* | `https://sonarqube.acampos.local` | Plataforma de análisis estático de código y calidad (`SAST`). |
-| **07** | OWASP Dependency-Track *(Próximamente)* | `https://dtrack.acampos.local` | Plataforma de análisis de composición de software (`SCA`) y gestión de `SBOM`. |
+| **05** | [[05-jenkins\|Jenkins LTS]] | `https://jenkins.acampos.local` | Servidor de automatización e integración/entrega continua (`CI/CD`). |
+| **06** | [[06-gitlab\|GitLab CE]] | `https://gitlab.acampos.local`<br>`ssh://...:2222` | Plataforma integral de desarrollo, control de versiones Git, _Merge Requests_ y CI. |
+| **07** | [[07-nexus\|Sonatype Nexus 3]] | `https://nexus.acampos.local`<br>`https://docker.acampos.local` | Repositorio privado de artefactos, proxy caché local (Maven, npm, PyPI) y _Docker Registry_. |
+| **08** | [[08-quay\|Project Quay]] | `https://quay.acampos.local` | Registro empresarial de imágenes de contenedor y artefactos OCI respaldado por PostgreSQL y Redis. |
+| **09** | SonarQube *(Próximamente)* | `https://sonarqube.acampos.local` | Plataforma de análisis estático de código y calidad (`SAST`). |
+| **10** | OWASP Dependency-Track *(Próximamente)* | `https://dtrack.acampos.local` | Plataforma de análisis de composición de software (`SCA`) y gestión de `SBOM`. |
