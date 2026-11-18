@@ -23,7 +23,7 @@ title: 08. Project Quay
 - **Estado efímero y notificaciones** (eventos de _build_, bloqueos y sesiones en tiempo real) en **Redis**.
 - **Capas binarias de imágenes (*blobs*)** en el volumen de almacenamiento `/datastorage` montado en disco local.
 
-Los contenedores de PostgreSQL y Redis residen exclusivamente en la red privada aislada `quay-internal` (inaccesibles desde fuera), mientras que el contenedor de Quay se conecta tanto a `quay-internal` como a `traefik-proxy` para recibir el tráfico HTTPS desde [[01-traefik|Traefik v3]] (`https://quay.acampos.local` -> `HTTP 8080`).
+Los contenedores de PostgreSQL y Redis residen exclusivamente en la red privada aislada `quay-internal` (inaccesibles desde fuera), mientras que el contenedor de Quay se conecta tanto a `quay-internal` como a `traefik-proxy` para recibir el tráfico HTTPS desde [[03-traefik|Traefik v3]] (`https://quay.acampos.local` -> `HTTP 8080`).
 
 ```mermaid
 flowchart TB
@@ -49,14 +49,10 @@ flowchart TB
     quay -->|"Almacena capas de imágenes"| vol_quay
 ```
 
----
-
 ## 2. Requerimientos previos
 
-- [[00-coredns|00. CoreDNS]], [[00-step-ca|00. Smallstep step-ca]] y [[01-traefik|01. Traefik v3]] operativos.
+- [[01-coredns|01. CoreDNS]], [[02-step-ca|02. Smallstep step-ca]] y [[03-traefik|03. Traefik v3]] operativos.
 - El daemon de Docker del host y de los clientes debe confiar en `/opt/traefik/root_ca.crt` (instalado mediante `sudo update-ca-certificates`).
-
----
 
 ## 3. Configuraciones
 

@@ -47,8 +47,8 @@ flowchart TB
 
 ## 2. Requerimientos previos
 
-- [[00-coredns|00. CoreDNS]] resolviendo `*.acampos.local` (`nexus.acampos.local` y `docker.acampos.local`) hacia `192.168.10.104`.
-- [[00-step-ca|00. Smallstep step-ca]] y [[01-traefik|01. Traefik v3]] operativos.
+- [[01-coredns|01. CoreDNS]] resolviendo `*.acampos.local` (`nexus.acampos.local` y `docker.acampos.local`) hacia `192.168.10.104`.
+- [[02-step-ca|02. Smallstep step-ca]] y [[03-traefik|03. Traefik v3]] operativos.
 
 ## 3. Configuraciones
 

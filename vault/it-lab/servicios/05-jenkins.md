@@ -18,7 +18,7 @@ title: 05. Jenkins
 
 **Jenkins LTS** actúa como nuestro motor de automatización e integración continua (`CI/CD`). No requiere una base de datos relacional externa: toda la configuración del sistema, definiciones de _pipelines_, historial de ejecuciones (`builds`), credenciales cifradas y _plugins_ reside en ficheros XML dentro del volumen persistente `jenkins_home` (`/var/jenkins_home`).
 
-[[01-traefik|Traefik v3]] realiza la terminación TLS en `https://jenkins.acampos.local` y reenvía el tráfico HTTP hacia el puerto `8080` del contenedor a través de la red `traefik-proxy`. Además, montamos el certificado raíz `/opt/traefik/root_ca.crt` para que los _pipelines_ y herramientas Java de Jenkins confíen en las conexiones HTTPS hacia [[03-gitlab|GitLab]], [[04-nexus|Nexus]] y [[05-quay|Quay]].
+[[03-traefik|Traefik v3]] realiza la terminación TLS en `https://jenkins.acampos.local` y reenvía el tráfico HTTP hacia el puerto `8080` del contenedor a través de la red `traefik-proxy`. Además, montamos el certificado raíz `/opt/traefik/root_ca.crt` para que los _pipelines_ y herramientas Java de Jenkins confíen en las conexiones HTTPS hacia [[06-gitlab|GitLab]], [[07-nexus|Nexus]] y [[08-quay|Quay]].
 
 ```mermaid
 flowchart TB
@@ -42,7 +42,7 @@ flowchart TB
 
 ## 2. Requerimientos previos
 
-- [[00-coredns|00. CoreDNS]], [[00-step-ca|00. Smallstep step-ca]] y [[01-traefik|01. Traefik v3]] operativos.
+- [[01-coredns|01. CoreDNS]], [[02-step-ca|02. Smallstep step-ca]] y [[03-traefik|03. Traefik v3]] operativos.
 - Certificado raíz público de la PKI disponible en `/opt/traefik/root_ca.crt`.
 
 ## 3. Configuraciones

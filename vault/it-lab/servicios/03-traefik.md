@@ -18,7 +18,7 @@ title: 03. Traefik v3
 
 **Traefik v3** actúa como nuestro _Edge Router_ y _Reverse Proxy_ centralizado, siendo el único punto de entrada HTTP/HTTPS expuesto en los puertos `80` y `443` del host `192.168.10.104`.
 
-Al igual que [[00-coredns|CoreDNS]], Traefik no utiliza base de datos externa: descubre los servicios dinámicamente escuchando los eventos del **socket de Docker** (`/var/run/docker.sock` montado en solo lectura) y persiste los certificados TLS emitidos por [[00-step-ca|Smallstep step-ca]] en un fichero JSON local (`/opt/traefik/letsencrypt/acme.json`) con permisos estrictos (`600`).
+Al igual que [[01-coredns|CoreDNS]], Traefik no utiliza base de datos externa: descubre los servicios dinámicamente escuchando los eventos del **socket de Docker** (`/var/run/docker.sock` montado en solo lectura) y persiste los certificados TLS emitidos por [[02-step-ca|Smallstep step-ca]] en un fichero JSON local (`/opt/traefik/letsencrypt/acme.json`) con permisos estrictos (`600`).
 
 ```mermaid
 flowchart TB
@@ -46,8 +46,8 @@ flowchart TB
 
 ## 2. Requerimientos previos
 
-- [[00-coredns|00. CoreDNS]] operativo y resolviendo `*.acampos.local` hacia `192.168.10.104`.
-- [[00-step-ca|00. Smallstep step-ca]] operativo y con su certificado raíz extraído en `/opt/traefik/root_ca.crt`.
+- [[01-coredns|01. CoreDNS]] operativo y resolviendo `*.acampos.local` hacia `192.168.10.104`.
+- [[02-step-ca|02. Smallstep step-ca]] operativo y con su certificado raíz extraído en `/opt/traefik/root_ca.crt`.
 
 ## 3. Configuraciones
 
@@ -192,7 +192,7 @@ curl -I --cacert /opt/traefik/root_ca.crt https://traefik.acampos.local/dashboar
 
 ## 5. Plantilla estándar de etiquetas para nuevos servicios
 
-Gracias al registro comodín `*.acampos.local` de [[00-coredns|CoreDNS]] y al descubrimiento automático de Traefik, para publicar cualquier aplicación adicional ([[01-portainer|Portainer]], [[02-jenkins|Jenkins]], [[03-gitlab|GitLab]], [[04-nexus|Nexus]], [[05-quay|Quay]], etc.) con HTTPS automático basta con conectarla a la red `traefik-proxy` y añadir estas etiquetas (`labels`) en su `compose.yml`:
+Gracias al registro comodín `*.acampos.local` de [[01-coredns|CoreDNS]] y al descubrimiento automático de Traefik, para publicar cualquier aplicación adicional ([[04-portainer|Portainer]], [[05-jenkins|Jenkins]], [[06-gitlab|GitLab]], [[07-nexus|Nexus]], [[08-quay|Quay]], etc.) con HTTPS automático basta con conectarla a la red `traefik-proxy` y añadir estas etiquetas (`labels`) en su `compose.yml`:
 
 ```yaml
     labels:

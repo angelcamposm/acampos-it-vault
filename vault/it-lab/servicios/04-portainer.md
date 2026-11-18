@@ -17,7 +17,7 @@ title: 04. Portainer CE
 
 **Portainer CE** proporciona una interfaz web y una API para administrar contenedores, pilas (`stacks` de Docker Compose), redes y volúmenes. No requiere una base de datos externa: almacena su configuración, usuarios y plantillas en una base de datos embebida (**BoltDB**) dentro del volumen persistente `portainer_data` y se comunica con el motor de contenedores montando `/var/run/docker.sock`.
 
-El servicio no expone puertos directamente en el host; todo el tráfico entra por [[01-traefik|Traefik v3]] en `https://portainer.acampos.local` (`TCP 443`) y se enruta internamente hacia `portainer:9000` por la red `traefik-proxy`.
+El servicio no expone puertos directamente en el host; todo el tráfico entra por [[03-traefik|Traefik v3]] en `https://portainer.acampos.local` (`TCP 443`) y se enruta internamente hacia `portainer:9000` por la red `traefik-proxy`.
 
 ```mermaid
 flowchart TB
@@ -45,8 +45,8 @@ flowchart TB
 
 ## 2. Requerimientos previos
 
-- [[00-coredns|00. CoreDNS]] resolviendo `portainer.acampos.local` -> `192.168.10.104`.
-- [[00-step-ca|00. Smallstep step-ca]] y [[01-traefik|01. Traefik v3]] en ejecución.
+- [[01-coredns|01. CoreDNS]] resolviendo `portainer.acampos.local` -> `192.168.10.104`.
+- [[02-step-ca|02. Smallstep step-ca]] y [[03-traefik|03. Traefik v3]] en ejecución.
 
 ---
 

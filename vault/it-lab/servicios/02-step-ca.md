@@ -19,7 +19,7 @@ title: 02. Smallstep step-ca
 
 **Smallstep `step-ca`** actúa como nuestra **Autoridad Certificadora (PKI) privada** y servidor **ACME** interno (equivalente a un _Let's Encrypt_ local). Almacena su configuración, claves privadas de la CA raíz e intermedia y el registro de certificados emitidos en una base de datos **BadgerDB** embebida dentro del volumen persistente `step_ca_data`.
 
-Cuando [[01-traefik|Traefik v3]] detecta un nuevo contenedor publicado bajo `*.acampos.local`, solicita automáticamente un certificado TLS a `step-ca` mediante el protocolo ACME (`HTTP-01`). Para validar ese desafío, `step-ca` consulta a [[00-coredns|CoreDNS]] (`192.168.10.104:53`) para resolver el nombre de dominio hacia Traefik y verificar el token en el puerto `80`.
+Cuando [[03-traefik|Traefik v3]] detecta un nuevo contenedor publicado bajo `*.acampos.local`, solicita automáticamente un certificado TLS a `step-ca` mediante el protocolo ACME (`HTTP-01`). Para validar ese desafío, `step-ca` consulta a [[01-coredns|CoreDNS]] (`192.168.10.104:53`) para resolver el nombre de dominio hacia Traefik y verificar el token en el puerto `80`.
 
 ```mermaid
 flowchart TB
@@ -46,7 +46,7 @@ flowchart TB
 
 ## 2. Requerimientos previos
 
-- [[00-coredns|00. CoreDNS]] desplegado y resolviendo `*.acampos.local` hacia `192.168.10.104`.
+- [[01-coredns|00. CoreDNS]] desplegado y resolviendo `*.acampos.local` hacia `192.168.10.104`.
 - Red externa `traefik-proxy` creada en Docker.
 
 ## 3. Configuraciones
@@ -78,7 +78,7 @@ DOCKER_STEPCA_INIT_ACME=true
 ### 3.2. Archivo Compose (`/opt/step-ca/compose.yml`)
 
 > [!warning] Directiva `dns` obligatoria
-> Es imprescindible incluir la directiva `dns: [192.168.10.104]` en el `compose.yml` de `step-ca` para forzar al contenedor a utilizar nuestro [[00-coredns|CoreDNS]] al validar los desafíos `HTTP-01` de `*.acampos.local`. Sin ella, `step-ca` no sabrá a qué IP conectarse para verificar los dominios internos.
+> Es imprescindible incluir la directiva `dns: [192.168.10.104]` en el `compose.yml` de `step-ca` para forzar al contenedor a utilizar nuestro [[01-coredns|CoreDNS]] al validar los desafíos `HTTP-01` de `*.acampos.local`. Sin ella, `step-ca` no sabrá a qué IP conectarse para verificar los dominios internos.
 
 ```yaml
 services:
@@ -137,7 +137,7 @@ Debe devolver:
 ok
 ```
 
-3. **Extrae el certificado raíz público (`root_ca.crt`)** hacia el directorio de [[01-traefik|Traefik]] para que el cliente ACME de Traefik confíe en nuestra CA privada:
+3. **Extrae el certificado raíz público (`root_ca.crt`)** hacia el directorio de [[03-traefik|Traefik]] para que el cliente ACME de Traefik confíe en nuestra CA privada:
 
 ```bash
 docker cp step-ca:/home/step/certs/root_ca.crt /opt/traefik/root_ca.crt

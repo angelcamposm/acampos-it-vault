@@ -16,10 +16,10 @@ title: 01. CoreDNS
 
 ## 1. High Level Architecture
 
-**CoreDNS** es un servidor DNS modular y _stateless_ (sin base de datos) escrito en Go y graduado por la CNCF. En nuestro laboratorio actúa como el **Servicio Base 00**, cargando sus reglas y zonas autoritativas directamente desde ficheros de texto en formato estándar BIND (RFC 1035) montados en modo solo lectura (`:ro`) desde `/opt/core-dns/config`.
+**CoreDNS** es un servidor DNS modular y _stateless_ (sin base de datos) escrito en Go y graduado por la [CNCF](https://www.cncf.io/projects/coredns/). En nuestro laboratorio actúa como el **Servicio Base 00**, cargando sus reglas y zonas autoritativas directamente desde ficheros de texto en formato estándar BIND (RFC 1035) montados en modo solo lectura (`:ro`) desde `/opt/core-dns/config`.
 
 > [!important] ¿Por qué CoreDNS es el primer servicio en desplegarse?
-> Tanto [[00-step-ca|Smallstep step-ca]] como [[01-traefik|Traefik v3]] dependen de que la resolución de `*.acampos.local` esté operativa antes de arrancar: cuando Traefik solicita un certificado TLS mediante el protocolo ACME, `step-ca` consulta a CoreDNS para resolver el dominio del servicio hacia `192.168.10.104` y validar el desafío `HTTP-01` en el puerto `80`.
+> Tanto [[02-step-ca|Smallstep step-ca]] como [[03-traefik|Traefik v3]] dependen de que la resolución de `*.acampos.local` esté operativa antes de arrancar: cuando Traefik solicita un certificado TLS mediante el protocolo ACME, `step-ca` consulta a CoreDNS para resolver el dominio del servicio hacia `192.168.10.104` y validar el desafío `HTTP-01` en el puerto `80`.
 
 ```mermaid
 flowchart TB
@@ -58,11 +58,13 @@ docker network inspect traefik-proxy >/dev/null 2>&1 || docker network create tr
 
 ## 3. Configuraciones
 
-Crea la estructura de directorios en `/opt/core-dns` y asigna la propiedad a tu usuario:
+Crea la estructura de directorios en `/opt/core-dns`:
 
 ```bash
 sudo mkdir -p /opt/core-dns/config/zones
 ```
+
+Asigna la propiedad a tu usuario:
 
 ```bash
 sudo chown -R $USER:$USER /opt/core-dns
@@ -72,12 +74,12 @@ La estructura final del servicio en disco será la siguiente:
 
 ```text
 /opt/core-dns/
-├── compose.yml
-└── config/
-    ├── Corefile
-    └── zones/
-        ├── acampos.local
-        └── 10.168.192.in-addr.arpa
+├─ compose.yml
+└─ config/
+   ├─ Corefile
+   └─ zones/
+      ├─ acampos.local
+      └─ 10.168.192.in-addr.arpa
 ```
 
 ### 3.1. Archivo principal (`/opt/core-dns/config/Corefile`)
@@ -115,7 +117,7 @@ acampos.local:53 {
 
 | Plugin | Función técnica |
 | :--- | :--- |
-| **`file`** | Sirve datos de zona autoritativa leyendo un fichero con sintaxis estándar BIND (RFC 1035). |
+| **`file`** | Sirve datos de zona autoritativa leyendo un fichero con sintaxis estándar BIND ([RFC1035](https://www.rfc-editor.org/info/rfc1035). |
 | **`reload 10s`** | Comprueba cada 10 segundos si el número de serie (`Serial`) del registro `SOA` ha aumentado en los ficheros de zona y recarga los cambios en memoria sin reiniciar el contenedor. |
 | **`forward`** | Reenvía cualquier consulta que no pertenezca a `acampos.local` ni a la zona inversa hacia los resolvedores públicos de Cloudflare (`1.1.1.1`) y Google (`8.8.8.8`). |
 | **`cache 30`** | Almacena en caché las respuestas externas durante un máximo de 30 segundos para reducir la latencia de red. |
@@ -123,7 +125,7 @@ acampos.local:53 {
 
 ### 3.2. Archivo de Zona Directa (`/opt/core-dns/config/zones/acampos.local`)
 
-En el archivo de zona directa incluimos tanto los registros explícitos de la infraestructura base como un registro **Wildcard (`*`)** apuntando a `192.168.10.104`. De este modo, **cualquier servicio publicado en el laboratorio** ([[01-portainer|Portainer]], [[02-jenkins|Jenkins]], [[03-gitlab|GitLab]], [[04-nexus|Nexus]], [[05-quay|Quay]], etc.) resolverá automáticamente hacia [[01-traefik|Traefik]] sin necesidad de editar la zona DNS cada vez que añadamos un contenedor nuevo.
+En el archivo de zona directa incluimos tanto los registros explícitos de la infraestructura base como un registro **Wildcard (`*`)** apuntando a `192.168.10.104`. De este modo, **cualquier servicio publicado en el laboratorio** ([[04-portainer|Portainer]], [[05-jenkins|Jenkins]], [[06-gitlab|GitLab]], [[07-nexus|Nexus]], [[08-quay|Quay]], etc.) resolverá automáticamente hacia [[03-traefik|Traefik]] sin necesidad de editar la zona DNS cada vez que añadamos un contenedor nuevo.
 
 ```dns
 $ORIGIN acampos.local.

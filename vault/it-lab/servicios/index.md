@@ -36,9 +36,11 @@ flowchart LR
     Proxy -->|"4. Tráfico HTTP interno (Red traefik-proxy)"| Apps
 ```
 
-1. **Resolución de nombres ([[00-coredns|CoreDNS]]):** El cliente consulta cualquier subdominio `*.acampos.local` a CoreDNS (`192.168.10.104:53`), que responde de forma autoritativa con la IP del nodo `192.168.10.104` (y reenvía a `1.1.1.1`/`8.8.8.8` las consultas a Internet).
-2. **Certificados TLS automáticos ([[00-step-ca|Smallstep step-ca]]):** Actúa como nuestra Autoridad Certificadora privada con soporte ACME.
-3. **Enrutamiento y terminación TLS ([[01-traefik|Traefik v3]]):** Escucha los eventos del socket de Docker, solicita un certificado a `step-ca` para cada nuevo contenedor con `traefik.enable=true` y enruta el tráfico por la red privada compartida `traefik-proxy`.
+1. **Resolución de nombres ([[01-coredns|CoreDNS]]):** El cliente consulta cualquier subdominio `*.acampos.local` a CoreDNS (`192.168.10.104:53`), que responde de forma autoritativa con la IP del nodo `192.168.10.104` (y reenvía a `1.1.1.1`/`8.8.8.8` las consultas a Internet).
+
+2. **Certificados TLS automáticos ([[02-step-ca|Smallstep step-ca]]):** Actúa como nuestra Autoridad Certificadora privada con soporte ACME.
+
+3. **Enrutamiento y terminación TLS ([[03-traefik|Traefik v3]]):** Escucha los eventos del socket de Docker, solicita un certificado a `step-ca` para cada nuevo contenedor con `traefik.enable=true` y enruta el tráfico por la red privada compartida `traefik-proxy`.
 
 ## 2. Servicios de Infraestructura Base
 
@@ -48,10 +50,10 @@ flowchart LR
 | Orden | Servicio | Dominio / Endpoint | Propósito |
 | :---: | :--- | :--- | :--- |
 | **00** | [[00-coredns-host-prepare\|Preparación del Host]] | `192.168.10.104` | Liberación del puerto `53` (`systemd-resolved`) y creación de la red `traefik-proxy`. |
-| **01** | [[00-coredns\|CoreDNS]] | `ns1.acampos.local` (`:53`) | Servidor DNS autoritativo local (`*.acampos.local` + zona inversa `PTR`) y _forwarder_. |
-| **02** | [[00-step-ca\|Smallstep step-ca]] | `ca.acampos.local` (`:9000`) | Autoridad Certificadora (PKI) privada y servidor ACME local para emisión automática de TLS. |
-| **03** | [[01-traefik\|Traefik v3]] | `https://traefik.acampos.local` | Proxy inverso, _Edge Router_ dinámico y punto de terminación del túnel TLS (`:80` / `:443`). |
-| **04** | [[01-portainer\|Portainer CE]] | `https://portainer.acampos.local` | Interfaz web y API para la gestión centralizada de contenedores, volúmenes y redes Docker. |
+| **01** | [[01-coredns\|CoreDNS]] | `ns1.acampos.local` (`:53`) | Servidor DNS autoritativo local (`*.acampos.local` + zona inversa `PTR`) y _forwarder_. |
+| **02** | [[02-step-ca\|Smallstep step-ca]] | `ca.acampos.local` (`:9000`) | Autoridad Certificadora (PKI) privada y servidor ACME local para emisión automática de TLS. |
+| **03** | [[03-traefik\|Traefik v3]] | `https://traefik.acampos.local` | Proxy inverso, _Edge Router_ dinámico y punto de terminación del túnel TLS (`:80` / `:443`). |
+| **04** | [[04-portainer\|Portainer CE]] | `https://portainer.acampos.local` | Interfaz web y API para la gestión centralizada de contenedores, volúmenes y redes Docker. |
 
 ## 3. Servicios de Plataforma DevSecOps
 

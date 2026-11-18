@@ -19,7 +19,7 @@ title: 06. GitLab CE
 
 **GitLab CE** (*Community Edition*) centraliza la gestión de repositorios Git, revisiones de código (*Merge Requests*), gestión de incidencias y pipelines de CI/CD. La distribución oficial Omnibus coordina internamente la aplicación Rails (Puma/Workhorse), Gitaly (almacenamiento Git), PostgreSQL (metadatos relacionales) y Redis (colas de trabajos _Sidekiq_ y caché), persistiendo todo el estado en tres volúmenes dedicados (`config`, `logs` y `data`).
 
-Dado que [[01-traefik|Traefik v3]] se encarga de la terminación TLS en `https://gitlab.acampos.local` (`TCP 443`) con certificados de [[00-step-ca|Smallstep step-ca]], configuramos el Nginx interno de GitLab para escuchar en HTTP plano (`TCP 80`) dentro de la red `traefik-proxy` (`nginx['listen_https'] = false`), mientras exponemos el acceso **Git over SSH** directamente en el puerto `2222` del host (para no colisionar con el puerto `22` del daemon OpenSSH del servidor anfitrión).
+Dado que [[03-traefik|Traefik v3]] se encarga de la terminación TLS en `https://gitlab.acampos.local` (`TCP 443`) con certificados de [[02-step-ca|Smallstep step-ca]], configuramos el Nginx interno de GitLab para escuchar en HTTP plano (`TCP 80`) dentro de la red `traefik-proxy` (`nginx['listen_https'] = false`), mientras exponemos el acceso **Git over SSH** directamente en el puerto `2222` del host (para no colisionar con el puerto `22` del daemon OpenSSH del servidor anfitrión).
 
 ```mermaid
 flowchart TB
@@ -48,7 +48,7 @@ flowchart TB
 
 ## 2. Requerimientos previos
 
-- [[00-coredns|00. CoreDNS]], [[00-step-ca|00. Smallstep step-ca]] y [[01-traefik|01. Traefik v3]] operativos.
+- [[01-coredns|01. CoreDNS]], [[02-step-ca|02. Smallstep step-ca]] y [[03-traefik|03. Traefik v3]] operativos.
 - Al menos **4 GB de RAM libres** en el host (GitLab Omnibus es intensivo en memoria).
 
 ## 3. Configuraciones
